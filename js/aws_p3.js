@@ -3034,6 +3034,7 @@ var Viewport = function(metadata) {
 			networkWorld.fadeOutNetwork(300);
 			catTextPanel.fadeOutPanel();
 			dogTextPanel.fadeOutPanel();
+			cnnPanel.fadeOutPanel();	
 			detectionProcessPanel.openPanel(new THREE.Vector3(1, 1, 1));		
       detectionTaskPanel.turnOffLight();
       detectionTask1Panel.turnOffLight();
@@ -3044,6 +3045,7 @@ var Viewport = function(metadata) {
 			var tween = new TWEEN.Tween(detectionProcessPanel)
 			.to({}, 200)
 			.onComplete(function(e) {
+			  cnnPanel.fadeInPanel();	
 				networkWorld.fadeInNetwork(500);
 				catPanel.fadeInAll(500);
 				catPanel.fadeInPanel();
